@@ -1,0 +1,652 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		048C57B266DB3C358998061829E47E19 /* HTTPContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EBD74196CDAC2E4FFCC6192729FBBB /* HTTPContentType.swift */; };
+		0A781FCFDD725B8A0CFA6351ACB04110 /* BuckarooBanzai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE0D459779D82190580BE9E9BEE83F /* BuckarooBanzai.swift */; };
+		1C44A5AB741583C611614CDB936DB068 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		2B44C9D2DEF374CEDE1BAE933C25B641 /* BuckarooBanzai-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EE272C487D10B367C476AE3D6EEB5CE /* BuckarooBanzai-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30558E1CFCB6F555845315C0F4F1733D /* JSONRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE32A5973E1735393EC015BE429C19 /* JSONRequestSerializer.swift */; };
+		3E1C93F75033C82F9C7C35CEED367DF2 /* Pods-WeatherApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D965FCD82D08E12F63D5514A208D4183 /* Pods-WeatherApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		609BED004A5C1DF65B6E12F3189001A3 /* FormRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24888F0F82FCC55204E338F900F17183 /* FormRequestSerializer.swift */; };
+		6F569422AAA6D584DCE4EAE3F37C5E1D /* BuckarooBanzai.h in Headers */ = {isa = PBXBuildFile; fileRef = 7772EF300C1512E8E55E3DAF4B851364 /* BuckarooBanzai.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89304E45D39B96C6D82EF5B7EDF16DB6 /* HTTPAcceptType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9B9A6154713A194F105F5E7BB9B9C3 /* HTTPAcceptType.swift */; };
+		B71EED7AE726ADDD5F35250318046782 /* BBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6FB3C21A0894EA667A1D858217B77 /* BBError.swift */; };
+		BC598A8A921621ACAC350497AE4D83D2 /* Pods-WeatherApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2045B79F2BDB7C38285D4E25C23DD /* Pods-WeatherApp-dummy.m */; };
+		C87044155D13655844E16219F51D5656 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9608ACC071EED950897572F35219B42 /* Service.swift */; };
+		DE83B6109BE0B95CF00998B2AF72CBBD /* BuckarooBanzai-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D68D2B92B5BDB8FDC4722CF491F4ED /* BuckarooBanzai-dummy.m */; };
+		DF669620718AF7892941B9A97601DCFC /* HTTPResponse+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85A31207AA3B0DB2F752CB9C2FB4721 /* HTTPResponse+ext.swift */; };
+		DF8E1D034B8DB4B67243BFF15B3F9FFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E098C4F224ADC23C331DE09FB12F46EC /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C011A54ADD4B88726A70D61703939 /* HTTPResponse.swift */; };
+		E74911B83CB6B62B7382A35659284358 /* HTTPRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C3281CC3640F642DDE09AA6C98E78D /* HTTPRequestMethod.swift */; };
+		EEF3719707D1035D4B284F29A1DEA8C0 /* RequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8AC438BEED03C51DECC44A879B8917 /* RequestSerializer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF192D4B5AE53FF73381D5EFFE959753 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 515F9B834A112BCA850AB763BFAD7B05;
+			remoteInfo = BuckarooBanzai;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A9E2E13F267922302D13A08A0324CE7 /* BuckarooBanzai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BuckarooBanzai.debug.xcconfig; sourceTree = "<group>"; };
+		1F8FEEE91BC8009516C1CC953DE04A90 /* BuckarooBanzai */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BuckarooBanzai; path = BuckarooBanzai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2049CA4BCEF836A438FBD40FB40902BA /* Pods-WeatherApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		24888F0F82FCC55204E338F900F17183 /* FormRequestSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormRequestSerializer.swift; path = BuckarooBanzai/Serializers/FormRequestSerializer.swift; sourceTree = "<group>"; };
+		2F94EA0EE4C94E42ACB56C9506EA60BC /* BuckarooBanzai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BuckarooBanzai.release.xcconfig; sourceTree = "<group>"; };
+		37C6FB3C21A0894EA667A1D858217B77 /* BBError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BBError.swift; path = BuckarooBanzai/Enumerations/BBError.swift; sourceTree = "<group>"; };
+		45EBD74196CDAC2E4FFCC6192729FBBB /* HTTPContentType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPContentType.swift; path = BuckarooBanzai/Enumerations/HTTPContentType.swift; sourceTree = "<group>"; };
+		4E9904B18C8C32370B98F074B2453516 /* Pods-WeatherApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeatherApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5163207A4C5441588D6768F9543C2BCC /* Pods-WeatherApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WeatherApp"; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6057EBFF7EF99394CEBFAA12C63F277F /* Pods-WeatherApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherApp-Info.plist"; sourceTree = "<group>"; };
+		61DE0D459779D82190580BE9E9BEE83F /* BuckarooBanzai.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BuckarooBanzai.swift; path = BuckarooBanzai/BuckarooBanzai.swift; sourceTree = "<group>"; };
+		6AFCEF7739B1579F8A6DBE8F94445B46 /* Pods-WeatherApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeatherApp-frameworks.sh"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7772EF300C1512E8E55E3DAF4B851364 /* BuckarooBanzai.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BuckarooBanzai.h; path = BuckarooBanzai/BuckarooBanzai.h; sourceTree = "<group>"; };
+		7ED9C58994DE0AAA1B7BDA43D3C27505 /* BuckarooBanzai.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BuckarooBanzai.modulemap; sourceTree = "<group>"; };
+		8448FA66053432DE9D9F8557F4DB62CE /* BuckarooBanzai-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BuckarooBanzai-prefix.pch"; sourceTree = "<group>"; };
+		9172F376EAE980339FE5DCBF09AE8A00 /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
+		92C3281CC3640F642DDE09AA6C98E78D /* HTTPRequestMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPRequestMethod.swift; path = BuckarooBanzai/Enumerations/HTTPRequestMethod.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E8AC438BEED03C51DECC44A879B8917 /* RequestSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestSerializer.swift; path = BuckarooBanzai/Protocols/RequestSerializer.swift; sourceTree = "<group>"; };
+		9EE272C487D10B367C476AE3D6EEB5CE /* BuckarooBanzai-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BuckarooBanzai-umbrella.h"; sourceTree = "<group>"; };
+		A9608ACC071EED950897572F35219B42 /* Service.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Service.swift; path = BuckarooBanzai/Protocols/Service.swift; sourceTree = "<group>"; };
+		AA9B9A6154713A194F105F5E7BB9B9C3 /* HTTPAcceptType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPAcceptType.swift; path = BuckarooBanzai/Enumerations/HTTPAcceptType.swift; sourceTree = "<group>"; };
+		C681D554B6A114E1A871A45664B67C20 /* BuckarooBanzai-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BuckarooBanzai-Info.plist"; sourceTree = "<group>"; };
+		C74C011A54ADD4B88726A70D61703939 /* HTTPResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPResponse.swift; path = "BuckarooBanzai/Data Structs/HTTPResponse.swift"; sourceTree = "<group>"; };
+		C9F2045B79F2BDB7C38285D4E25C23DD /* Pods-WeatherApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherApp-dummy.m"; sourceTree = "<group>"; };
+		D889B97725C513ACAD07321FB45B986A /* Pods-WeatherApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WeatherApp.modulemap"; sourceTree = "<group>"; };
+		D965FCD82D08E12F63D5514A208D4183 /* Pods-WeatherApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherApp-umbrella.h"; sourceTree = "<group>"; };
+		DAAE32A5973E1735393EC015BE429C19 /* JSONRequestSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONRequestSerializer.swift; path = BuckarooBanzai/Serializers/JSONRequestSerializer.swift; sourceTree = "<group>"; };
+		E85A31207AA3B0DB2F752CB9C2FB4721 /* HTTPResponse+ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HTTPResponse+ext.swift"; path = "BuckarooBanzai/Data Structs/HTTPResponse+ext.swift"; sourceTree = "<group>"; };
+		F30FB17DD77D3BF2435C14BF0823CBB1 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
+		F5D68D2B92B5BDB8FDC4722CF491F4ED /* BuckarooBanzai-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BuckarooBanzai-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46B0AD26E4477B1013805300A2095B8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C44A5AB741583C611614CDB936DB068 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		859F7B6AB8EA675726A5F89BFEC633A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF8E1D034B8DB4B67243BFF15B3F9FFA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5240553A6A7FDDB1C04F3176C61485AB /* BuckarooBanzai */ = {
+			isa = PBXGroup;
+			children = (
+				37C6FB3C21A0894EA667A1D858217B77 /* BBError.swift */,
+				7772EF300C1512E8E55E3DAF4B851364 /* BuckarooBanzai.h */,
+				61DE0D459779D82190580BE9E9BEE83F /* BuckarooBanzai.swift */,
+				24888F0F82FCC55204E338F900F17183 /* FormRequestSerializer.swift */,
+				AA9B9A6154713A194F105F5E7BB9B9C3 /* HTTPAcceptType.swift */,
+				45EBD74196CDAC2E4FFCC6192729FBBB /* HTTPContentType.swift */,
+				92C3281CC3640F642DDE09AA6C98E78D /* HTTPRequestMethod.swift */,
+				C74C011A54ADD4B88726A70D61703939 /* HTTPResponse.swift */,
+				E85A31207AA3B0DB2F752CB9C2FB4721 /* HTTPResponse+ext.swift */,
+				DAAE32A5973E1735393EC015BE429C19 /* JSONRequestSerializer.swift */,
+				9E8AC438BEED03C51DECC44A879B8917 /* RequestSerializer.swift */,
+				A9608ACC071EED950897572F35219B42 /* Service.swift */,
+				A5D842BBD50E2B2DF7157EEE9E96A5CA /* Support Files */,
+			);
+			name = BuckarooBanzai;
+			path = BuckarooBanzai;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A5D842BBD50E2B2DF7157EEE9E96A5CA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7ED9C58994DE0AAA1B7BDA43D3C27505 /* BuckarooBanzai.modulemap */,
+				F5D68D2B92B5BDB8FDC4722CF491F4ED /* BuckarooBanzai-dummy.m */,
+				C681D554B6A114E1A871A45664B67C20 /* BuckarooBanzai-Info.plist */,
+				8448FA66053432DE9D9F8557F4DB62CE /* BuckarooBanzai-prefix.pch */,
+				9EE272C487D10B367C476AE3D6EEB5CE /* BuckarooBanzai-umbrella.h */,
+				1A9E2E13F267922302D13A08A0324CE7 /* BuckarooBanzai.debug.xcconfig */,
+				2F94EA0EE4C94E42ACB56C9506EA60BC /* BuckarooBanzai.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BuckarooBanzai";
+			sourceTree = "<group>";
+		};
+		B14FD0D38E82F23D6358FF3EFBACBA00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5240553A6A7FDDB1C04F3176C61485AB /* BuckarooBanzai */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA7475683495C208CFED4D3FCE9EFB0D /* Pods-WeatherApp */ = {
+			isa = PBXGroup;
+			children = (
+				D889B97725C513ACAD07321FB45B986A /* Pods-WeatherApp.modulemap */,
+				4E9904B18C8C32370B98F074B2453516 /* Pods-WeatherApp-acknowledgements.markdown */,
+				2049CA4BCEF836A438FBD40FB40902BA /* Pods-WeatherApp-acknowledgements.plist */,
+				C9F2045B79F2BDB7C38285D4E25C23DD /* Pods-WeatherApp-dummy.m */,
+				6AFCEF7739B1579F8A6DBE8F94445B46 /* Pods-WeatherApp-frameworks.sh */,
+				6057EBFF7EF99394CEBFAA12C63F277F /* Pods-WeatherApp-Info.plist */,
+				D965FCD82D08E12F63D5514A208D4183 /* Pods-WeatherApp-umbrella.h */,
+				9172F376EAE980339FE5DCBF09AE8A00 /* Pods-WeatherApp.debug.xcconfig */,
+				F30FB17DD77D3BF2435C14BF0823CBB1 /* Pods-WeatherApp.release.xcconfig */,
+			);
+			name = "Pods-WeatherApp";
+			path = "Target Support Files/Pods-WeatherApp";
+			sourceTree = "<group>";
+		};
+		CEA9786E3481C518FDD461C686A84F0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F8FEEE91BC8009516C1CC953DE04A90 /* BuckarooBanzai */,
+				5163207A4C5441588D6768F9543C2BCC /* Pods-WeatherApp */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				B14FD0D38E82F23D6358FF3EFBACBA00 /* Pods */,
+				CEA9786E3481C518FDD461C686A84F0F /* Products */,
+				EE6EDD90640915451AFC1E7FA634A6E8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE6EDD90640915451AFC1E7FA634A6E8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA7475683495C208CFED4D3FCE9EFB0D /* Pods-WeatherApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		41087AB37FE4D4A68D8AEE2AAAE56ACC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F569422AAA6D584DCE4EAE3F37C5E1D /* BuckarooBanzai.h in Headers */,
+				2B44C9D2DEF374CEDE1BAE933C25B641 /* BuckarooBanzai-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB424F61D35DACE8FFEB648A245016F3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E1C93F75033C82F9C7C35CEED367DF2 /* Pods-WeatherApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2FB376565AEB9484417E14E6A834885C /* Pods-WeatherApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D0493BA28F5FAD2930FB6863BF93564 /* Build configuration list for PBXNativeTarget "Pods-WeatherApp" */;
+			buildPhases = (
+				FB424F61D35DACE8FFEB648A245016F3 /* Headers */,
+				1C771A63C4612142F739E32A1D4E00A6 /* Sources */,
+				46B0AD26E4477B1013805300A2095B8F /* Frameworks */,
+				7CE4728A6963202F61C108F779C60814 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B631F3CCAE947CF6794BE8FCDFC1075 /* PBXTargetDependency */,
+			);
+			name = "Pods-WeatherApp";
+			productName = Pods_WeatherApp;
+			productReference = 5163207A4C5441588D6768F9543C2BCC /* Pods-WeatherApp */;
+			productType = "com.apple.product-type.framework";
+		};
+		515F9B834A112BCA850AB763BFAD7B05 /* BuckarooBanzai */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC095A689DE20BC21516DAD6087767C /* Build configuration list for PBXNativeTarget "BuckarooBanzai" */;
+			buildPhases = (
+				41087AB37FE4D4A68D8AEE2AAAE56ACC /* Headers */,
+				99340DF2F03562E8E83B9B8D6F3C8E1D /* Sources */,
+				859F7B6AB8EA675726A5F89BFEC633A9 /* Frameworks */,
+				BFDC48A4A7B9202EB11506C5B9F02E91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BuckarooBanzai;
+			productName = BuckarooBanzai;
+			productReference = 1F8FEEE91BC8009516C1CC953DE04A90 /* BuckarooBanzai */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = CEA9786E3481C518FDD461C686A84F0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				515F9B834A112BCA850AB763BFAD7B05 /* BuckarooBanzai */,
+				2FB376565AEB9484417E14E6A834885C /* Pods-WeatherApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7CE4728A6963202F61C108F779C60814 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFDC48A4A7B9202EB11506C5B9F02E91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C771A63C4612142F739E32A1D4E00A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC598A8A921621ACAC350497AE4D83D2 /* Pods-WeatherApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99340DF2F03562E8E83B9B8D6F3C8E1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71EED7AE726ADDD5F35250318046782 /* BBError.swift in Sources */,
+				0A781FCFDD725B8A0CFA6351ACB04110 /* BuckarooBanzai.swift in Sources */,
+				DE83B6109BE0B95CF00998B2AF72CBBD /* BuckarooBanzai-dummy.m in Sources */,
+				609BED004A5C1DF65B6E12F3189001A3 /* FormRequestSerializer.swift in Sources */,
+				89304E45D39B96C6D82EF5B7EDF16DB6 /* HTTPAcceptType.swift in Sources */,
+				048C57B266DB3C358998061829E47E19 /* HTTPContentType.swift in Sources */,
+				E74911B83CB6B62B7382A35659284358 /* HTTPRequestMethod.swift in Sources */,
+				E098C4F224ADC23C331DE09FB12F46EC /* HTTPResponse.swift in Sources */,
+				DF669620718AF7892941B9A97601DCFC /* HTTPResponse+ext.swift in Sources */,
+				30558E1CFCB6F555845315C0F4F1733D /* JSONRequestSerializer.swift in Sources */,
+				EEF3719707D1035D4B284F29A1DEA8C0 /* RequestSerializer.swift in Sources */,
+				C87044155D13655844E16219F51D5656 /* Service.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B631F3CCAE947CF6794BE8FCDFC1075 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BuckarooBanzai;
+			target = 515F9B834A112BCA850AB763BFAD7B05 /* BuckarooBanzai */;
+			targetProxy = AF192D4B5AE53FF73381D5EFFE959753 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		19FE29E3D993BB971FAC74602285C570 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9172F376EAE980339FE5DCBF09AE8A00 /* Pods-WeatherApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		377B019D80482C08B65685484D6439A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A9E2E13F267922302D13A08A0324CE7 /* BuckarooBanzai.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BuckarooBanzai/BuckarooBanzai-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BuckarooBanzai/BuckarooBanzai-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BuckarooBanzai/BuckarooBanzai.modulemap";
+				PRODUCT_MODULE_NAME = BuckarooBanzai;
+				PRODUCT_NAME = BuckarooBanzai;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		CCC4D7D69B4E48E2560EBD133690519B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F94EA0EE4C94E42ACB56C9506EA60BC /* BuckarooBanzai.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BuckarooBanzai/BuckarooBanzai-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BuckarooBanzai/BuckarooBanzai-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BuckarooBanzai/BuckarooBanzai.modulemap";
+				PRODUCT_MODULE_NAME = BuckarooBanzai;
+				PRODUCT_NAME = BuckarooBanzai;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F7FDD329F084EA80D873982EF93876A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F30FB17DD77D3BF2435C14BF0823CBB1 /* Pods-WeatherApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D0493BA28F5FAD2930FB6863BF93564 /* Build configuration list for PBXNativeTarget "Pods-WeatherApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19FE29E3D993BB971FAC74602285C570 /* Debug */,
+				F7FDD329F084EA80D873982EF93876A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC095A689DE20BC21516DAD6087767C /* Build configuration list for PBXNativeTarget "BuckarooBanzai" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				377B019D80482C08B65685484D6439A8 /* Debug */,
+				CCC4D7D69B4E48E2560EBD133690519B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
