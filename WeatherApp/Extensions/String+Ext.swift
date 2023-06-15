@@ -19,6 +19,8 @@ extension String {
         return charSet
     }
     
+    /// Encodes a string to be safe for an HTTP query
+    /// - Returns: the urlencoded string
     func urlEncode() -> String {
         guard let encoded = self.addingPercentEncoding(withAllowedCharacters: customCharacterSet) else {
             return self

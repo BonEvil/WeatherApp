@@ -8,6 +8,7 @@
 import Foundation
 import BuckarooBanzai
 
+/// Service class to retrieve a wether image
 class WeatherImageService: BaseWeatherService {
     
     required init(withImageId id: String) {

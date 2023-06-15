@@ -8,6 +8,7 @@
 import Foundation
 import BuckarooBanzai
 
+/// Service class to retrieve geocodes for the given place query
 class GeoCodeService: BaseWeatherService {
     
     required init(withPlace place: String) {

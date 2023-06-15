@@ -14,6 +14,7 @@ struct Location: Codable {
     let lon: Float
 }
 
+/// Controller to make network calls to retrieve geocode information and, subsequently, current weather for that geo location
 struct ServiceController {
     
     static func getLatLonFromPlace(_ place: String) async throws -> [LocationResponse] {

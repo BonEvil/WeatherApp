@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import BuckarooBanzai
 
+/// Controller to make network calls to retrieve associated weather images
 struct ImageController {
     
     static func getImageNamed(_ name: String) async throws -> UIImage {

@@ -8,11 +8,9 @@
 import Foundation
 import UIKit
 
+/// This is currently only using an ephemeral state for caching
+/// Other global application state variables could be added here
 struct ApplicationState {
-    
-    // MARK: - Storage
-    
-    
     
     // MARK: - Images
     

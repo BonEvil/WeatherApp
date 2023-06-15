@@ -8,6 +8,7 @@
 import Foundation
 import BuckarooBanzai
 
+/// The base class for network calls
 class BaseWeatherService: Service {
     var requestMethod: HTTPRequestMethod = .GET
     var acceptType: HTTPAcceptType = .JSON

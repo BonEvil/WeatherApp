@@ -18,6 +18,7 @@ struct CurrentWeatherQuery {
     let unit: Unit
 }
 
+/// Service class to retrieve the current weather of a given lat/lon
 class CurrentWeatherService: BaseWeatherService {
     
     required init(withCurrentWeatherData data: CurrentWeatherQuery) {

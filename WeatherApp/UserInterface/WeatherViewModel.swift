@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// The viewModel to support the WeatherViewController
+/// Elements of the View Controller bind to the viewModel for updates to the view
 class WeatherViewModel {
     
     let defaultLocationButtonTitle = "Set Location"
@@ -75,6 +77,7 @@ class WeatherViewModel {
         self.setWeatherIcon = action
     }
     
+    /// Starts a process to check of the last location is stored and then retrieves the weather data for that location
     func weatherForLastLocation() async throws {
         guard let location = UserDefaults.standard.object(forKey: "lastLocation") as? [String:String],
               let unit = UserDefaults.standard.object(forKey: "lastUnit") as? String else {
@@ -96,6 +99,10 @@ class WeatherViewModel {
         }
     }
     
+    /// Retrieves the weather for a given location
+    /// - Parameters:
+    ///   - location: `Location` object with the name, lat and lon to request weather data from
+    ///   - unit: `Unit` value for either `.imperial` or `.metric` information in the returned data
     func getWeatherForLocation(_ location: Location, unit: Unit) async throws {
         self.lastLocation = location
         self.lastUnit = unit
@@ -112,8 +119,11 @@ class WeatherViewModel {
         }
     }
     
+    /// Updates the bound objects from the View Controller
+    /// - Parameters:
+    ///   - weatherResponse: the `WeatherResponse` model containing the weather data
+    ///   - unit: `Unit` type to set accompanying unit measures to the data
     private func setWeatherFromResponse(_ weatherResponse: WeatherResponse, withUnit unit: Unit) {
-        print("\(weatherResponse)")
         
         setSunrise?(weatherResponse.current.sunrise.formatDate(withOffset: Double(weatherResponse.timezoneOffset)))
         
@@ -141,7 +151,9 @@ class WeatherViewModel {
         }
     }
     
-    func getImageNamed(_ name: String) async throws {
+    /// Retrieves the weather icon image if the icon is not currently in the image cache
+    /// - Parameter name: the name id for the weather icon returned in the weather data
+    private func getImageNamed(_ name: String) async throws {
         
         if ApplicationState.cachedImage(withId: name) != nil {
             DispatchQueue.main.async { [weak self] in
