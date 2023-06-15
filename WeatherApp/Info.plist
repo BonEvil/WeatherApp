@@ -21,5 +21,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>OPEN_WEATHER_APP_ID</key>
+	<string>f012b5ee14fa1b60e69606fb469041e7</string>
 </dict>
 </plist>
