@@ -8,5 +8,7 @@
 import Foundation
 
 protocol PlaceProtocol {
-    func searchForPlace(_ place: Place) async throws -> [LocationResponse]
+    func searchForPlace(_ place: String) async throws -> [LocationResponse]
+    func onSelect(_ location: Location, _ unit: Unit)
+    func getCurrentLocation()
 }

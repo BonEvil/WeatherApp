@@ -7,10 +7,12 @@
 
 import Foundation
 
-struct LocationResponse: Codable {
+struct LocationResponse: Codable, Identifiable {
     let name: String
     let lat: Float
     let lon: Float
     let country: String
-    let state: String
+    let state: String?
+    
+    var id: Float { lat + lon }
 }

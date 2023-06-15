@@ -6,19 +6,63 @@
 //
 
 import UIKit
+import SwiftUI
 
 class WeatherViewController: UIViewController {
     
     let viewModel = WeatherViewModel()
     
-    @IBOutlet weak var searchLocationButton: UIButton!
     @IBOutlet weak var locationButton: UIButton! {
         didSet {
-            locationButton.setTitle("Find Location", for: .normal)
             viewModel.bindLocaton { [weak self] location in
-                DispatchQueue.main.async {
-                    self?.locationButton.setTitle(location, for: .normal)
-                }
+                self?.locationButton.setTitle(location, for: .normal)
+            }
+        }
+    }
+    @IBOutlet weak var temperatureLabel: UILabel! {
+        didSet {
+            viewModel.bindTemperature { [weak self] text in
+                self?.temperatureLabel.text = text
+            }
+        }
+    }
+    
+    @IBOutlet weak var iconImageView: UIImageView! {
+        didSet {
+            viewModel.bindWeatherIcon { [weak self] name in
+                self?.iconImageView.image = ApplicationState.cachedImage(withId: name)
+            }
+        }
+    }
+    
+    @IBOutlet weak var conditionLabel: UILabel! {
+        didSet {
+            viewModel.bindCondition { [weak self] text in
+                self?.conditionLabel.text = text
+            }
+        }
+    }
+    
+    @IBOutlet weak var windLabel: UILabel! {
+        didSet {
+            viewModel.bindWindspeed { [weak self] text in
+                self?.windLabel.text = text
+            }
+        }
+    }
+    
+    @IBOutlet weak var sunriseLabel: UILabel! {
+        didSet {
+            viewModel.bindSunrise { [weak self] text in
+                self?.sunriseLabel.text = text
+            }
+        }
+    }
+    
+    @IBOutlet weak var sunsetLabel: UILabel! {
+        didSet {
+            viewModel.bindSunset { [weak self] text in
+                self?.sunsetLabel.text = text
             }
         }
     }
@@ -26,36 +70,22 @@ class WeatherViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        viewModel.bindSunset { time in
-            print(time)
-        }
-        
-        viewModel.bindSunrise { time in
-            print(time)
+        Task {
+            do {
+                try await viewModel.weatherForLastLocation()
+            } catch {
+                // TODO: get location and set weather
+                print("\(error)")
+            }
         }
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         if locationButton == sender {
-            // TODO: show location search view
-            
-            Task {
-                do {
-                    let locationResponses = try await viewModel.searchForPlace(Place(city: "London", state: ""))
-                    guard let first = locationResponses.first else {
-                        return
-                    }
-                    print("\(first)")
-                    let name = first.name + ", " + first.state
-                    try await viewModel.getWeatherForLocation(Location(name: name ,lat: first.lat, lon: first.lon), unit: .imperial)
-                } catch {
-                    print("\(error)")
-                }
+            let placeSelection = PlaceSelectionView(placeProtocol: self.viewModel) { [weak self] in
+                self?.dismiss(animated: true)
             }
-        }
-        
-        if searchLocationButton == sender {
-            // TODO: location search
+            self.present(UIHostingController(rootView: placeSelection), animated: true)
         }
     }
 }

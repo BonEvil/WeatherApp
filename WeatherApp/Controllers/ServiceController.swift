@@ -8,12 +8,7 @@
 import Foundation
 import BuckarooBanzai
 
-struct Place {
-    let city: String
-    let state: String
-}
-
-struct Location {
+struct Location: Codable {
     let name: String
     let lat: Float
     let lon: Float
@@ -21,9 +16,9 @@ struct Location {
 
 struct ServiceController {
     
-    static func getLatLonFromPlace(_ place: Place) async throws -> [LocationResponse] {
+    static func getLatLonFromPlace(_ place: String) async throws -> [LocationResponse] {
         
-        let service = GeoCodeService(withPlace: "\(place.city),\(place.state)")
+        let service = GeoCodeService(withPlace: "\(place)")
         do {
             let response = try await BuckarooBanzai.shared.start(service: service)
             let locations: [LocationResponse] = try response.decodeBodyData(convertFromSnakeCase: true)

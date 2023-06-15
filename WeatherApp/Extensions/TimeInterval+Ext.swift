@@ -9,13 +9,13 @@ import Foundation
 
 extension TimeInterval {
     
-    func formatDate() -> String {
+    func formatDate(withOffset offset: Double) -> String {
         let formatter = DateFormatter()
-        formatter.timeZone = .current
+        formatter.timeZone = TimeZone(abbreviation: "UTC")
         formatter.dateFormat = "h:mma"
         formatter.amSymbol = "am"
         formatter.pmSymbol = "pm"
-        let dateString = formatter.string(from: Date(timeIntervalSince1970: self))
+        let dateString = formatter.string(from: Date(timeIntervalSince1970: self + offset))
         return dateString
     }
 }

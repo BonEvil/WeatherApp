@@ -11,6 +11,6 @@ import BuckarooBanzai
 class GeoCodeService: BaseWeatherService {
     
     required init(withPlace place: String) {
-        super.init(withPath: "/geo/1.0/direct?q=\(place)&limit=5")
+        super.init(withPath: "/geo/1.0/direct?q=\(place.urlEncode())&limit=10")
     }
 }

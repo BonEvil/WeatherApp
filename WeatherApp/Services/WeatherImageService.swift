@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import BuckarooBanzai
+
+class WeatherImageService: BaseWeatherService {
+    
+    required init(withImageId id: String) {
+        super.init(withPath: "", needsAppId: false)
+        
+        self.requestURL = "https://openweathermap.org/img/wn/\(id)@2x.png"
+        self.acceptType = .ANY
+    }
+}
