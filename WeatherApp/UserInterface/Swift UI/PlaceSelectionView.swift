@@ -9,13 +9,14 @@ import SwiftUI
 
 struct PlaceSelectionView: View {
     
+    let units = [Unit.imperial, Unit.metric]
+
     var placeProtocol: PlaceProtocol?
-    @State var locations: [LocationResponse] = [LocationResponse]()
+    var lastUnit: Unit?
     var onFinished: (() -> Void)?
     
+    @State var locations: [LocationResponse] = [LocationResponse]()
     @State var searchTerm: String = ""
-    
-    let units = [Unit.imperial, Unit.metric]
     @State var unit: Unit = .imperial
     
     var body: some View {
@@ -47,6 +48,11 @@ struct PlaceSelectionView: View {
             .onChange(of: searchTerm) { newValue in
                 if newValue.count > 2 {
                     doSearch(forPlace: newValue)
+                }
+            }
+            .onAppear {
+                if let lastUnit = lastUnit {
+                    unit = lastUnit
                 }
             }
         }

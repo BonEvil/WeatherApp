@@ -84,7 +84,14 @@ class WeatherViewController: UIViewController {
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         if locationButton == sender {
-            let placeSelection = PlaceSelectionView(placeProtocol: self.viewModel) { [weak self] in
+            var unit = Unit.imperial
+            do {
+                let lastUnit = try viewModel.tryLastUnit()
+                unit = lastUnit
+            } catch {
+                print("\(error)")
+            }
+            let placeSelection = PlaceSelectionView(placeProtocol: self.viewModel, lastUnit: unit) { [weak self] in
                 self?.dismiss(animated: true)
             }
             self.present(UIHostingController(rootView: placeSelection), animated: true)

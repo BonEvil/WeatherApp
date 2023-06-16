@@ -77,26 +77,39 @@ class WeatherViewModel {
         self.setWeatherIcon = action
     }
     
+    // MARK: -
+    
     /// Starts a process to check of the last location is stored and then retrieves the weather data for that location
     func weatherForLastLocation() async throws {
-        guard let location = UserDefaults.standard.object(forKey: "lastLocation") as? [String:String],
-              let unit = UserDefaults.standard.object(forKey: "lastUnit") as? String else {
+        do {
+            let lastLocation = try tryLastLocation()
+            let lastUnit = try tryLastUnit()
+            try await self.getWeatherForLocation(lastLocation, unit: lastUnit)
+        } catch {
+            self.lastLocation = nil
+            self.lastUnit = nil
+            throw error
+        }
+    }
+    
+    func tryLastLocation() throws -> Location {
+        guard let location = UserDefaults.standard.object(forKey: "lastLocation") as? [String:String] else {
             throw NSError(domain: "weatherViewModelDomain", code: -1, userInfo: [NSLocalizedDescriptionKey: "No last location"])
         }
         
         guard let name = location["name"], let lon = location["lon"], let lat = location["lat"], let lonFloat = Float(lon), let latFloat = Float(lat) else {
-            self.lastUnit = nil
-            self.lastLocation = nil
             throw NSError(domain: "weatherViewModelDomain", code: -1, userInfo: [NSLocalizedDescriptionKey: "Could not parse last location from user defaults"])
         }
-
-        let lastLocation = Location(name: name, lat: latFloat, lon: lonFloat)
-        let lastUnit = unit == "imperial" ? Unit.imperial : Unit.metric
-        do {
-            try await self.getWeatherForLocation(lastLocation, unit: lastUnit)
-        } catch {
-            throw error
+        
+        return Location(name: name, lat: latFloat, lon: lonFloat)
+    }
+    
+    func tryLastUnit() throws -> Unit {
+        guard let unit = UserDefaults.standard.object(forKey: "lastUnit") as? String else {
+            throw NSError(domain: "weatherViewModelDomain", code: -1, userInfo: [NSLocalizedDescriptionKey: "No last unit"])
         }
+        
+        return unit == "imperial" ? Unit.imperial : Unit.metric
     }
     
     /// Retrieves the weather for a given location
