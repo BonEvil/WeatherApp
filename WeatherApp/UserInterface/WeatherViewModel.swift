@@ -77,7 +77,8 @@ class WeatherViewModel {
     ///   - unit: `Unit` value for either `.imperial` or `.metric` information in the returned data
     func getWeatherForLocation(_ location: LocationResponse, unit: Unit) async throws {
         DispatchQueue.main.async { [weak self] in
-            self?.setLocation?(location.name)
+            let state = location.state != nil ? ", " + location.state! : ""
+            self?.setLocation?(location.name + state)
         }
         do {
             let weatherResponse = try await ServiceController.getCurrentWeatherForLocation(location, unit: unit)
