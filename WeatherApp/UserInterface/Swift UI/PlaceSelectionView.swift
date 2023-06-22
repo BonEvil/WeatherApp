@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct PlaceSelectionView: View {
-    
-    let units = [Unit.imperial, Unit.metric]
 
     var placeProtocol: PlaceProtocol?
     var lastUnit: Unit?
@@ -21,40 +19,8 @@ struct PlaceSelectionView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text("Unit:")
-                Picker("Unit", selection: $unit) {
-                    ForEach(units, id: \.self) {
-                        Text($0.rawValue)
-                    }
-                }
-                .pickerStyle(.segmented)
-            }
-            .padding(EdgeInsets(top: 20.0, leading: 16.0, bottom: 0.0, trailing: 16.0))
-            
-            HStack {
-                TextField("Search", text: $searchTerm)
-                    .textFieldStyle(.roundedBorder)
-                .padding(EdgeInsets(top: 10.0, leading: 16.0, bottom: 8.0, trailing: 16.0))
-                
-                Button {
-                    placeProtocol?.getCurrentLocation()
-                    onFinished?()
-                } label: {
-                    Label("", systemImage: "location")
-                }
-                .padding(EdgeInsets(top: 10.0, leading: 0.0, bottom: 8.0, trailing: 16.0))
-            }
-            .onChange(of: searchTerm) { newValue in
-                if newValue.count > 2 {
-                    doSearch(forPlace: newValue)
-                }
-            }
-            .onAppear {
-                if let lastUnit = lastUnit {
-                    unit = lastUnit
-                }
-            }
+            UnitPickerView(unit: $unit)
+            SearchBoxView(searchTerm: $searchTerm, placeProtocol: placeProtocol, onFinished: onFinished)
         }
         
         List(locations) { location in
@@ -67,6 +33,16 @@ struct PlaceSelectionView: View {
         }
         
         Spacer()
+            .onChange(of: searchTerm) { newValue in
+                if newValue.count > 2 {
+                    doSearch(forPlace: newValue)
+                }
+            }
+            .onAppear {
+                if let lastUnit = lastUnit {
+                    unit = lastUnit
+                }
+            }
     }
     
     private func doSearch(forPlace place: String) {
