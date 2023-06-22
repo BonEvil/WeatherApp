@@ -197,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				6BA8E4D42A3B985B00D75145 /* LocationSearchView.swift */,
-				6BE4839D2A43D554007012BD /* SwiftUI components */,
+				6BE4839D2A43D554007012BD /* Components */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -205,27 +205,19 @@
 		6BE483942A43B726007012BD /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6BE483A02A4480F8007012BD /* WeatherInfoIconView */,
+				6BE483972A43BDC4007012BD /* WeatherInfoIconView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		6BE4839D2A43D554007012BD /* SwiftUI components */ = {
+		6BE4839D2A43D554007012BD /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				6B0098D82A3BBB970037E435 /* SelectionCell.swift */,
 				6BE483992A43D217007012BD /* UnitPickerView.swift */,
 				6BE4839B2A43D38B007012BD /* SearchBoxView.swift */,
 			);
-			path = "SwiftUI components";
-			sourceTree = "<group>";
-		};
-		6BE483A02A4480F8007012BD /* WeatherInfoIconView */ = {
-			isa = PBXGroup;
-			children = (
-				6BE483972A43BDC4007012BD /* WeatherInfoIconView.swift */,
-			);
-			path = WeatherInfoIconView;
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
