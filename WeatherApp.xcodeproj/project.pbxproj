@@ -141,7 +141,7 @@
 				6B6F7FB72A3A818000E61337 /* WeatherViewController.swift */,
 				6B6F7FB92A3A81E900E61337 /* WeatherViewModel.swift */,
 				6B6F7F952A3A520C00E61337 /* Main.storyboard */,
-				6BA8E4D62A3B992C00D75145 /* Swift UI */,
+				6BA8E4D62A3B992C00D75145 /* SwiftUI */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -193,15 +193,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		6BA8E4D62A3B992C00D75145 /* Swift UI */ = {
+		6BA8E4D62A3B992C00D75145 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
 				6BA8E4D42A3B985B00D75145 /* PlaceSelectionView.swift */,
-				6B0098D82A3BBB970037E435 /* SelectionCell.swift */,
-				6BE483992A43D217007012BD /* UnitPickerView.swift */,
-				6BE4839B2A43D38B007012BD /* SearchBoxView.swift */,
+				6BE4839D2A43D554007012BD /* SwiftUI components */,
 			);
-			path = "Swift UI";
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		6BE483942A43B726007012BD /* Components */ = {
@@ -210,6 +208,16 @@
 				6BE483972A43BDC4007012BD /* WeatherInfoIconView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		6BE4839D2A43D554007012BD /* SwiftUI components */ = {
+			isa = PBXGroup;
+			children = (
+				6B0098D82A3BBB970037E435 /* SelectionCell.swift */,
+				6BE483992A43D217007012BD /* UnitPickerView.swift */,
+				6BE4839B2A43D38B007012BD /* SearchBoxView.swift */,
+			);
+			path = "SwiftUI components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
