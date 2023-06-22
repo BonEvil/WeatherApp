@@ -31,6 +31,8 @@ class WeatherViewController: UIViewController {
     
     @IBOutlet weak var iconImageView: UIImageView! {
         didSet {
+            iconImageView.backgroundColor = UIColor(named: "WeatherIconBackgroundColor")
+            iconImageView.layer.cornerRadius = 10.0
             viewModel.bindWeatherIcon { [weak self] name in
                 self?.iconImageView.image = ApplicationState.cachedImage(withId: name)
             }
@@ -45,30 +47,39 @@ class WeatherViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var windLabel: UILabel! {
+    @IBOutlet weak var windInfoView: WeatherInfoIconView! {
         didSet {
+            windInfoView.weatherInfoIcon = .wind
             viewModel.bindWindspeed { [weak self] text in
-                self?.windLabel.text = text
+                self?.windInfoView.weatherInfoText = text
             }
         }
     }
     
-    @IBOutlet weak var sunriseLabel: UILabel! {
+    @IBOutlet weak var sunriseInfoView: WeatherInfoIconView! {
         didSet {
+            sunriseInfoView.weatherInfoIcon = .sunrise
             viewModel.bindSunrise { [weak self] text in
-                self?.sunriseLabel.text = text
+                self?.sunriseInfoView.weatherInfoText = text
             }
         }
     }
     
-    @IBOutlet weak var sunsetLabel: UILabel! {
+    @IBOutlet weak var sunsetInfoView: WeatherInfoIconView! {
         didSet {
+            sunsetInfoView.weatherInfoIcon = .sunset
             viewModel.bindSunset { [weak self] text in
-                self?.sunsetLabel.text = text
+                self?.sunsetInfoView.weatherInfoText = text
             }
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.view.backgroundColor = UIColor(named: "BackgroundColor")
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
