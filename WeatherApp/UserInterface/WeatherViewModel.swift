@@ -15,26 +15,6 @@ class WeatherViewModel {
     let defaultTemperatureText = "--°"
     let defaultText = "--"
     
-    private var lastLocation: Location? = UserDefaults.standard.object(forKey: "lastLocation") as? Location {
-        didSet {
-            guard let lastLocation = lastLocation else {
-                UserDefaults.standard.removeObject(forKey: "lastLocation")
-                return
-            }
-            let location = ["name": lastLocation.name, "lat": "\(lastLocation.lat)", "lon": "\(lastLocation.lon)"]
-            UserDefaults.standard.set(location, forKey: "lastLocation")
-        }
-    }
-    private var lastUnit: Unit? = UserDefaults.standard.object(forKey: "lastUnit") as? Unit {
-        didSet {
-            guard let lastUnit = lastUnit else {
-                UserDefaults.standard.removeObject(forKey: "lastUnit")
-                return
-            }
-            UserDefaults.standard.set("\(lastUnit)", forKey: "lastUnit")
-        }
-    }
-    
     private var setLocation: ((String) -> Void)?
     private var setSunrise: ((String) -> Void)?
     private var setSunset: ((String) -> Void)?
@@ -81,44 +61,21 @@ class WeatherViewModel {
     
     /// Starts a process to check of the last location is stored and then retrieves the weather data for that location
     func weatherForLastLocation() async throws {
+        guard let lastLocation = LocationResponse.lastLocation(), let lastUnit = Unit.lastUnit() else {
+            throw NSError(domain: "LastLocationError", code: -1, userInfo: [NSLocalizedDescriptionKey : "Not found"])
+        }
         do {
-            let lastLocation = try tryLastLocation()
-            let lastUnit = try tryLastUnit()
             try await self.getWeatherForLocation(lastLocation, unit: lastUnit)
         } catch {
-            self.lastLocation = nil
-            self.lastUnit = nil
             throw error
         }
-    }
-    
-    func tryLastLocation() throws -> Location {
-        guard let location = UserDefaults.standard.object(forKey: "lastLocation") as? [String:String] else {
-            throw NSError(domain: "weatherViewModelDomain", code: -1, userInfo: [NSLocalizedDescriptionKey: "No last location"])
-        }
-        
-        guard let name = location["name"], let lon = location["lon"], let lat = location["lat"], let lonFloat = Float(lon), let latFloat = Float(lat) else {
-            throw NSError(domain: "weatherViewModelDomain", code: -1, userInfo: [NSLocalizedDescriptionKey: "Could not parse last location from user defaults"])
-        }
-        
-        return Location(name: name, lat: latFloat, lon: lonFloat)
-    }
-    
-    func tryLastUnit() throws -> Unit {
-        guard let unit = UserDefaults.standard.object(forKey: "lastUnit") as? String else {
-            throw NSError(domain: "weatherViewModelDomain", code: -1, userInfo: [NSLocalizedDescriptionKey: "No last unit"])
-        }
-        
-        return unit == "imperial" ? Unit.imperial : Unit.metric
     }
     
     /// Retrieves the weather for a given location
     /// - Parameters:
     ///   - location: `Location` object with the name, lat and lon to request weather data from
     ///   - unit: `Unit` value for either `.imperial` or `.metric` information in the returned data
-    func getWeatherForLocation(_ location: Location, unit: Unit) async throws {
-        self.lastLocation = location
-        self.lastUnit = unit
+    func getWeatherForLocation(_ location: LocationResponse, unit: Unit) async throws {
         DispatchQueue.main.async { [weak self] in
             self?.setLocation?(location.name)
         }
@@ -187,35 +144,19 @@ class WeatherViewModel {
     }
 }
 
-extension WeatherViewModel: PlaceProtocol {
+extension WeatherViewModel: LocationSearchProtocol {
     
-    func searchForPlace(_ place: String) async throws -> [LocationResponse] {
+    func searchForLocation(_ place: String) async throws -> [LocationResponse] {
         do {
             let locations = try await ServiceController.getLatLonFromPlace(place)
             return locations
         } catch {
-            throw error
-        }
-    }
-    
-    func onSelect(_ location: Location, _ unit: Unit) {
-        Task {
-            do {
-                try await self.getWeatherForLocation(location, unit: unit)
-            } catch {
-                print("\(error)")
-            }
+            print("\(error)")
+            return [LocationResponse]()
         }
     }
     
     func getCurrentLocation() {
-        let locationController = LocationController()
-        Task {
-            do {
-                let _ = try await locationController.getCurrentLocation()
-            } catch {
-                print("\(error)")
-            }
-        }
+        // TODO: Implement LocationController
     }
 }

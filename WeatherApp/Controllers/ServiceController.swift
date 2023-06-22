@@ -8,12 +8,6 @@
 import Foundation
 import BuckarooBanzai
 
-struct Location: Codable {
-    let name: String
-    let lat: Float
-    let lon: Float
-}
-
 /// Controller to make network calls to retrieve geocode information and, subsequently, current weather for that geo location
 struct ServiceController {
     
@@ -29,7 +23,7 @@ struct ServiceController {
         }
     }
     
-    static func getCurrentWeatherForLocation(_ location: Location, unit: Unit) async throws -> WeatherResponse {
+    static func getCurrentWeatherForLocation(_ location: LocationResponse, unit: Unit) async throws -> WeatherResponse {
         let data = CurrentWeatherQuery(lat: location.lat, lon: location.lon, unit: unit)
         let service = CurrentWeatherService(withCurrentWeatherData: data)
         do {

@@ -11,7 +11,7 @@ struct SearchBoxView: View {
     
     @Binding var searchTerm: String
     
-    var placeProtocol: PlaceProtocol?
+    var placeProtocol: LocationSearchProtocol?
     var onFinished: (() -> Void)?
     
     var body: some View {

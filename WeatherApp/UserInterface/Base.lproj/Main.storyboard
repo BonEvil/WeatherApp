@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -42,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tempLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFk-cU-tWb">
-                                <rect key="frame" x="74" y="125" width="245.33333333333337" height="60"/>
+                                <rect key="frame" x="74.000000000000014" y="125" width="245.33333333333337" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="yGJ-MO-PxY"/>
                                 </constraints>
@@ -67,7 +66,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="529-iN-hmG" customClass="WeatherInfoIconView" customModule="WeatherApp" customModuleProvider="target">
-                                <rect key="frame" x="136.66666666666663" y="385" width="120" height="30"/>
+                                <rect key="frame" x="136.66666666666666" y="385" width="119.99999999999997" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5dG-Ti-97W"/>
@@ -78,9 +77,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
-                            <constraint firstItem="xiv-6B-eZQ" firstAttribute="leading" secondItem="Afi-sn-5Ky" secondAttribute="trailing" multiplier="1.1" constant="8" symbolic="YES" id="4FE-Xa-2C1"/>
                             <constraint firstItem="gEV-xt-kNU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5cH-xa-h0M"/>
-                            <constraint firstItem="529-iN-hmG" firstAttribute="leading" secondItem="xiv-6B-eZQ" secondAttribute="trailing" multiplier="1.1" constant="8" symbolic="YES" id="BaR-gh-eOO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gEV-xt-kNU" secondAttribute="trailing" constant="16" id="Cbh-81-ozC"/>
                             <constraint firstItem="fIc-BZ-Jbl" firstAttribute="top" secondItem="AoA-wf-gPD" secondAttribute="bottom" constant="8" symbolic="YES" id="IRd-hy-czS"/>
                             <constraint firstItem="xiv-6B-eZQ" firstAttribute="top" secondItem="Afi-sn-5Ky" secondAttribute="bottom" constant="8" id="JBF-KU-jcs"/>
@@ -95,7 +92,9 @@
                             <constraint firstItem="Afi-sn-5Ky" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="blL-lY-J0q"/>
                             <constraint firstItem="529-iN-hmG" firstAttribute="top" secondItem="xiv-6B-eZQ" secondAttribute="bottom" constant="7.6699999999999999" id="dta-ZB-sWq"/>
                             <constraint firstItem="Afi-sn-5Ky" firstAttribute="centerY" secondItem="xiv-6B-eZQ" secondAttribute="centerY" id="h7Y-Jh-wTC"/>
+                            <constraint firstItem="529-iN-hmG" firstAttribute="leading" secondItem="xiv-6B-eZQ" secondAttribute="trailing" constant="44" id="hhy-c6-4vl"/>
                             <constraint firstItem="AoA-wf-gPD" firstAttribute="top" secondItem="vFk-cU-tWb" secondAttribute="bottom" constant="8" symbolic="YES" id="iZJ-tj-liV"/>
+                            <constraint firstItem="xiv-6B-eZQ" firstAttribute="leading" secondItem="Afi-sn-5Ky" secondAttribute="trailing" constant="44" id="rN1-uN-2yT"/>
                             <constraint firstItem="vFk-cU-tWb" firstAttribute="top" secondItem="gEV-xt-kNU" secondAttribute="bottom" constant="8" symbolic="YES" id="slP-kB-ZaB"/>
                             <constraint firstItem="529-iN-hmG" firstAttribute="centerY" secondItem="xiv-6B-eZQ" secondAttribute="centerY" id="z4q-k7-unu"/>
                             <constraint firstItem="gEV-xt-kNU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zgl-WU-FNy"/>
@@ -105,24 +104,24 @@
                                 <exclude reference="YbL-JM-flR"/>
                                 <exclude reference="blL-lY-J0q"/>
                                 <exclude reference="h7Y-Jh-wTC"/>
-                                <exclude reference="4FE-Xa-2C1"/>
                                 <exclude reference="JBF-KU-jcs"/>
                                 <exclude reference="L4R-iA-3xN"/>
                                 <exclude reference="ZXp-YW-mCh"/>
                                 <exclude reference="aJy-ZX-wFJ"/>
-                                <exclude reference="BaR-gh-eOO"/>
+                                <exclude reference="rN1-uN-2yT"/>
                                 <exclude reference="LIS-KA-v5X"/>
                                 <exclude reference="dta-ZB-sWq"/>
+                                <exclude reference="hhy-c6-4vl"/>
                                 <exclude reference="z4q-k7-unu"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <include reference="h7Y-Jh-wTC"/>
-                                <include reference="4FE-Xa-2C1"/>
                                 <include reference="L4R-iA-3xN"/>
                                 <include reference="ZXp-YW-mCh"/>
-                                <include reference="BaR-gh-eOO"/>
+                                <include reference="rN1-uN-2yT"/>
+                                <include reference="hhy-c6-4vl"/>
                                 <include reference="z4q-k7-unu"/>
                             </mask>
                         </variation>

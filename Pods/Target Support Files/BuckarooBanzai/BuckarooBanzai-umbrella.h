@@ -10,7 +10,7 @@
 #endif
 #endif
 
-#import "BuckarooBanzai.h"
+#import <BuckarooBanzai/BuckarooBanzai.h>
 
 FOUNDATION_EXPORT double BuckarooBanzaiVersionNumber;
 FOUNDATION_EXPORT const unsigned char BuckarooBanzaiVersionString[];

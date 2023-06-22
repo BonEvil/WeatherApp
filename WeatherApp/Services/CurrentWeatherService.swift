@@ -8,8 +8,28 @@
 import Foundation
 
 enum Unit: String {
+    static var lastUnitKey = "_lastUnit"
+    
     case imperial
     case metric
+    
+    func saveLastUnit() {
+        UserDefaults.standard.set("\(self)", forKey: Unit.lastUnitKey)
+    }
+    
+    static func lastUnit() -> Unit? {
+        guard let unit = UserDefaults.standard.object(forKey: Unit.lastUnitKey) as? String else {
+            return nil
+        }
+        
+        return unit == "imperial" ? .imperial : .metric
+    }
+    
+    static func removeLastUnit() {
+        if UserDefaults.standard.object(forKey: Unit.lastUnitKey) != nil {
+            UserDefaults.standard.removeObject(forKey: Unit.lastUnitKey)
+        }
+    }
 }
 
 struct CurrentWeatherQuery {

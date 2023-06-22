@@ -9,13 +9,12 @@ import SwiftUI
 
 struct PlaceSelectionView: View {
 
-    var placeProtocol: PlaceProtocol?
-    var lastUnit: Unit?
+    var placeProtocol: LocationSearchProtocol?
     var onFinished: (() -> Void)?
     
     @State var locations: [LocationResponse] = [LocationResponse]()
     @State var searchTerm: String = ""
-    @State var unit: Unit = .imperial
+    @State var unit: Unit = Unit.lastUnit() != nil ? Unit.lastUnit()! : .imperial
     
     var body: some View {
         VStack {
@@ -25,9 +24,8 @@ struct PlaceSelectionView: View {
         
         List(locations) { location in
             SelectionCell(location: location, select: {
-                let state = location.state != nil ? ", " + location.state! : ""
-                let name = location.name + state
-                placeProtocol?.onSelect(Location(name: name, lat: location.lat, lon: location.lon), unit)
+                location.saveLastLocation()
+                unit.saveLastUnit()
                 onFinished?()
             })
         }
@@ -38,17 +36,12 @@ struct PlaceSelectionView: View {
                     doSearch(forPlace: newValue)
                 }
             }
-            .onAppear {
-                if let lastUnit = lastUnit {
-                    unit = lastUnit
-                }
-            }
     }
     
     private func doSearch(forPlace place: String) {
         Task {
             do {
-                let searchLocations = try await placeProtocol?.searchForPlace(place)
+                let searchLocations = try await placeProtocol?.searchForLocation(place)
                 if let searchLocations = searchLocations {
                     self.locations = searchLocations
                 }

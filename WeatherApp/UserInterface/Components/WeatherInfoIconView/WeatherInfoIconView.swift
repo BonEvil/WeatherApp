@@ -36,7 +36,7 @@ class WeatherInfoIconView: UIView {
     }
     
     // MARK: - View components
-    
+
     private let iconImageView = UIImageView()
     private let weatherInfoLabel = UILabel()
 
@@ -91,13 +91,4 @@ class WeatherInfoIconView: UIView {
             weatherInfoLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }
