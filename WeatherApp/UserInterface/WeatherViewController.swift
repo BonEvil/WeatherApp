@@ -79,10 +79,26 @@ class WeatherViewController: UIViewController {
         
         self.view.backgroundColor = UIColor(named: "BackgroundColor")
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        weatherForLastLocation()
+    }
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        if locationButton == sender {
+            
+            let locationSearchView = LocationSearchView(placeProtocol: self.viewModel) { [weak self] in
+                self?.dismiss(animated: true)
+                self?.weatherForLastLocation()
+            }
+
+            self.present(UIHostingController(rootView: locationSearchView), animated: true)
+        }
+    }
+    
+    private func weatherForLastLocation() {
         Task {
             do {
                 try await viewModel.weatherForLastLocation()
@@ -90,23 +106,6 @@ class WeatherViewController: UIViewController {
                 // TODO: get location and set weather
                 print("\(error)")
             }
-        }
-    }
-    
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        if locationButton == sender {
-            
-            let placeSelection = LocationSearchView(placeProtocol: self.viewModel) { [weak self] in
-                self?.dismiss(animated: true)
-                Task {
-                    do {
-                        try await self?.viewModel.weatherForLastLocation()
-                    } catch {
-                        print("\(error)")
-                    }
-                }
-            }
-            self.present(UIHostingController(rootView: placeSelection), animated: true)
         }
     }
 }
