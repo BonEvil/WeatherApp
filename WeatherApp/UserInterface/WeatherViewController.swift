@@ -96,7 +96,7 @@ class WeatherViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: UIButton) {
         if locationButton == sender {
             
-            let placeSelection = PlaceSelectionView(placeProtocol: self.viewModel) { [weak self] in
+            let placeSelection = LocationSearchView(placeProtocol: self.viewModel) { [weak self] in
                 self?.dismiss(animated: true)
                 Task {
                     do {

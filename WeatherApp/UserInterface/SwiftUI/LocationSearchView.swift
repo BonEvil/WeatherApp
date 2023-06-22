@@ -1,5 +1,5 @@
 //
-//  PlaceSelectionView.swift
+//  LocationSearchView.swift
 //  WeatherApp
 //
 //  Created by Daniel Person on 6/15/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PlaceSelectionView: View {
+struct LocationSearchView: View {
 
     var placeProtocol: LocationSearchProtocol?
     var onFinished: (() -> Void)?
@@ -54,6 +54,6 @@ struct PlaceSelectionView: View {
 
 struct PlaceSelection_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceSelectionView()
+        LocationSearchView()
     }
 }
