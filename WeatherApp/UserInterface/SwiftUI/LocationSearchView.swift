@@ -12,7 +12,7 @@ struct LocationSearchView: View {
     var placeProtocol: LocationSearchProtocol?
     var onFinished: (() -> Void)?
     
-    @State var locations: [LocationResponse] = [LocationResponse]()
+    @State var locations: [Location] = [Location]()
     @State var searchTerm: String = ""
     @State var unit: Unit = Unit.lastUnit() != nil ? Unit.lastUnit()! : .imperial
     

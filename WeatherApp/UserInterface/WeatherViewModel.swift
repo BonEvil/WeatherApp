@@ -61,7 +61,7 @@ class WeatherViewModel {
     
     /// Starts a process to check of the last location is stored and then retrieves the weather data for that location
     func weatherForLastLocation() async throws {
-        guard let lastLocation = LocationResponse.lastLocation(), let lastUnit = Unit.lastUnit() else {
+        guard let lastLocation = Location.lastLocation(), let lastUnit = Unit.lastUnit() else {
             throw NSError(domain: "LastLocationError", code: -1, userInfo: [NSLocalizedDescriptionKey : "Not found"])
         }
         do {
@@ -75,7 +75,7 @@ class WeatherViewModel {
     /// - Parameters:
     ///   - location: `LocationResponse` object with the name, lat and lon to request weather data from
     ///   - unit: `Unit` value for either `.imperial` or `.metric` information in the returned data
-    func getWeatherForLocation(_ location: LocationResponse, unit: Unit) async throws {
+    func getWeatherForLocation(_ location: Location, unit: Unit) async throws {
         DispatchQueue.main.async { [weak self] in
             let state = location.state != nil ? ", " + location.state! : ""
             self?.setLocation?(location.name + state)
@@ -147,13 +147,13 @@ class WeatherViewModel {
 
 extension WeatherViewModel: LocationSearchProtocol {
     
-    func searchForLocation(_ location: String) async throws -> [LocationResponse] {
+    func searchForLocation(_ location: String) async throws -> [Location] {
         do {
             let locations = try await ServiceController.getLatLonFromLocation(location)
             return locations
         } catch {
             print("\(error)")
-            return [LocationResponse]()
+            return [Location]()
         }
     }
     

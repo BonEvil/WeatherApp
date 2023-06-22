@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SelectionCell: View {
     
-    var location: LocationResponse
+    var location: Location
     var select: (() -> Void)?
     
     var body: some View {

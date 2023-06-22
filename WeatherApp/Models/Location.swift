@@ -1,5 +1,5 @@
 //
-//  LocationResponse.swift
+//  Location.swift
 //  WeatherApp
 //
 //  Created by Daniel Person on 6/14/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LocationResponse: Codable, Identifiable {
+struct Location: Codable, Identifiable {
     
     private static var lastLocationKey = "_lastLocation"
     
@@ -20,7 +20,7 @@ struct LocationResponse: Codable, Identifiable {
     var id: Float { lat + lon }
 }
 
-extension LocationResponse {
+extension Location {
 
     func saveLastLocation() {
         let location = ["name": self.name,
@@ -28,11 +28,11 @@ extension LocationResponse {
                         "lon": "\(self.lon)",
                         "country": self.country,
                         "state": self.state  != nil ? self.state! : ""]
-        UserDefaults.standard.set(location, forKey: LocationResponse.lastLocationKey)
+        UserDefaults.standard.set(location, forKey: Location.lastLocationKey)
     }
 
-    static func lastLocation() -> LocationResponse? {
-        guard let location = UserDefaults.standard.object(forKey: LocationResponse.lastLocationKey) as? [String: String] else {
+    static func lastLocation() -> Location? {
+        guard let location = UserDefaults.standard.object(forKey: Location.lastLocationKey) as? [String: String] else {
             return nil
         }
         
@@ -48,12 +48,12 @@ extension LocationResponse {
             return nil
         }
         
-        return LocationResponse(name: name, lat: lat, lon: lon, country: country, state: state == "" ? nil : state)
+        return Location(name: name, lat: lat, lon: lon, country: country, state: state == "" ? nil : state)
     }
 
     static func removeLastLocation() {
-        if UserDefaults.standard.object(forKey: LocationResponse.lastLocationKey) != nil {
-            UserDefaults.standard.removeObject(forKey: LocationResponse.lastLocationKey)
+        if UserDefaults.standard.object(forKey: Location.lastLocationKey) != nil {
+            UserDefaults.standard.removeObject(forKey: Location.lastLocationKey)
         }
     }
 }
