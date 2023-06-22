@@ -73,7 +73,7 @@ class WeatherViewModel {
     
     /// Retrieves the weather for a given location
     /// - Parameters:
-    ///   - location: `Location` object with the name, lat and lon to request weather data from
+    ///   - location: `LocationResponse` object with the name, lat and lon to request weather data from
     ///   - unit: `Unit` value for either `.imperial` or `.metric` information in the returned data
     func getWeatherForLocation(_ location: LocationResponse, unit: Unit) async throws {
         DispatchQueue.main.async { [weak self] in
