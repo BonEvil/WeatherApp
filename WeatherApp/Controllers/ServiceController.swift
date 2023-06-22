@@ -11,9 +11,9 @@ import BuckarooBanzai
 /// Controller to make network calls to retrieve geocode information and, subsequently, current weather for that geo location
 struct ServiceController {
     
-    static func getLatLonFromPlace(_ place: String) async throws -> [LocationResponse] {
+    static func getLatLonFromLocation(_ location: String) async throws -> [LocationResponse] {
         
-        let service = GeoCodeService(withPlace: "\(place)")
+        let service = GeoCodeService(withPlace: "\(location)")
         do {
             let response = try await BuckarooBanzai.shared.start(service: service)
             let locations: [LocationResponse] = try response.decodeBodyData(convertFromSnakeCase: true)

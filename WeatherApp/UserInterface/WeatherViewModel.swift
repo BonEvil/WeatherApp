@@ -146,9 +146,9 @@ class WeatherViewModel {
 
 extension WeatherViewModel: LocationSearchProtocol {
     
-    func searchForLocation(_ place: String) async throws -> [LocationResponse] {
+    func searchForLocation(_ location: String) async throws -> [LocationResponse] {
         do {
-            let locations = try await ServiceController.getLatLonFromPlace(place)
+            let locations = try await ServiceController.getLatLonFromLocation(location)
             return locations
         } catch {
             print("\(error)")
