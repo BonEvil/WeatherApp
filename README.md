@@ -3,7 +3,7 @@ Weather app code challenge using Open Weather
 
 ## App Structure
 ### User Interface
-This application has a main View Controller ```WeatherViewController``` for weather information. This is, of course, using UIKit.
+This application has a main View Controller ```WeatherViewController``` for weather information which is using UIKit.
 The ```LocationSearchView``` is a SwiftUI view and is used to search for a location to use for weather data. This demonstrates the use of SwiftUI within a UIKit application
 
 ### Separation of concerns
