@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 
 /// The main View Controller for the application
-/// Uses a modelView for business logic
+/// Uses a View Model for business logic
 class WeatherViewController: UIViewController {
     
     let viewModel = WeatherViewModel()
